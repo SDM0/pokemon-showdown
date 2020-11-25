@@ -62,11 +62,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0.1,
 		num: 0,
 	},
-	testing: {
-		onUpdate(pokemon) {
-			console.log(pokemon.side.pokemonLeft);
+	perseverance: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, pokemon, target, move) {
+			if (pokemon.side.pokemonLeft === 1) {
+				return this.chainModify(1.25);
+			}
 		},
-		name: "Testing",
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			if (pokemon.side.pokemonLeft === 1) {
+				return this.chainModify(1.25);
+			}
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd) {
+			if (pokemon.side.pokemonLeft === 1) {
+				return this.chainModify(1.25);
+			}
+		},
+		onStart(pokemon) {
+			if (pokemon.side.pokemonLeft === 1) {
+				this.add('-ability', pokemon, 'Perseverance');
+			}
+		},
+		name: "Perseverance",
 		rating: 4,
 		num: 991,
 	},
