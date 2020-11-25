@@ -27,6 +27,34 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 */
 
 export const Moves: {[moveid: string]: MoveData} = {
+	manipulation: {
+		num: 945,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Manipulation",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				const result = this.random(5);
+				if (result === 0) {
+					this.boost({atk: -1}, target);
+				} else if (result === 1) { 
+					this.boost({def: -1}, target);
+				} else if (result === 2) { 
+					this.boost({spa: -1}, target);
+				} else if (result === 3) { 
+					this.boost({spd: -1}, target);
+				} else { 
+					this.boost({spe: -1}, target);
+				}
+		target: "normal",
+		type: "Dark",
+		contestType: "Clever",
+	},
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
@@ -3570,6 +3598,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
+		contestType: "Beautiful",
+	},
+	prismbeam: {
+		num: 934,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Prism Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Light",
 		contestType: "Beautiful",
 	},
 	dragonascent: {
