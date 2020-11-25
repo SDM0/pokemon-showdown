@@ -29824,7 +29824,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			outrage: ["8M", "7T", "6T", "5T", "4T"],
 			pound: ["8L1", "7L1", "6L1", "5L1", "4L1", "3L1"],
 			poweruppunch: ["6M"],
-			prisbeam: ["8M", "7M"],
+			prismbeam: ["8M", "7M"],
 			protect: ["8M", "7M", "6M", "5M", "4M", "3M"],
 			pursuit: ["7L18", "6L17", "5L17", "4L17", "3L17"],
 			quickattack: ["8L1", "7L1", "6L1", "5L1", "4L1", "3L1"],
