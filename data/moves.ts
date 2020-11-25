@@ -51,6 +51,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				} else { 
 					this.boost({spe: -1}, target);
 				}
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		contestType: "Clever",
