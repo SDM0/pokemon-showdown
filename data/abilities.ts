@@ -63,10 +63,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 0,
 	},
 	testing: {
-		onModifyAtk(atk, attacker, defender, move) {
-			if (attacker.canSwitch(attacker.side)) {
-				return this.chainModify(1.5);
-			}
+		onUpdate(pokemon) {
+			console.log(pokemon.switchIns);
 		},
 		name: "Testing",
 		rating: 4,
