@@ -5573,6 +5573,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cute",
 	},
+	callout: {
+		num: 966,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Callout",
+		pp: 20,
+		priority: 2,
+		flags: {},
+		volatileStatus: 'callout',
+		onTryHit(target) {
+			if (target.side.active.length < 2) return false;
+		},
+		condition: {
+			duration: 1,
+			onStart(target, source, effect) {
+				if (effect?.id === 'zpower') {
+					this.add('-singleturn', target, 'move: Callout', '[zeffect]');
+				} else {
+					this.add('-singleturn', target, 'move: Callout');
+				}
+			},
+			onFoeRedirectTargetPriority: 1,
+			onFoeRedirectTarget(target, source, source2, move) {
+				if (!this.effectData.target.isSkyDropped() && this.validTarget(this.effectData.target, source, move.target)) {
+					if (move.smartTarget) move.smartTarget = false;
+					this.debug("Callout redirected target of move");
+					return this.effectData.target;
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentAlly",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+	},
 	forcepalm: {
 		num: 395,
 		accuracy: 100,

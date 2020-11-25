@@ -4660,6 +4660,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			bounce: ["8M", "7T", "6T", "5T", "4T"],
 			brickbreak: ["8M", "8V", "7M", "6M", "5M", "4M", "3M"],
 			bubblebeam: ["7V"],
+			callout: ["8M", "7M"],
 			calmmind: ["8M", "8V", "7M", "6M", "5M", "4M", "3M"],
 			captivate: ["4M"],
 			chargebeam: ["7M", "6M", "5M", "4M"],
