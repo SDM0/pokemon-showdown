@@ -45650,6 +45650,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: ["8M", "8L52", "7L40", "6M", "6L40", "6S2", "6S3", "5M", "5L40", "5S1", "4M", "4L40"],
 			doubleteam: ["7M", "6M", "5M", "4M"],
 			dracometeor: ["8T", "7T", "6T", "6S2", "5T", "4T"],
+			draconicfangs: ["8M", "7M"],
 			dragonbreath: ["8L1"],
 			dragonclaw: ["8M", "8L42", "7M", "7L33", "6M", "6L33", "6S2", "6S3", "5M", "5L33", "5S1", "4M", "4L33"],
 			dragonpulse: ["8M", "7T", "6T", "5T", "4M"],
