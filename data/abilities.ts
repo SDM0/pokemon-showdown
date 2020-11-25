@@ -64,7 +64,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	testing: {
 		onUpdate(pokemon) {
-			console.log(pokemon.switchIns);
+			console.log(pokemon.side.pokemonLeft);
 		},
 		name: "Testing",
 		rating: 4,
