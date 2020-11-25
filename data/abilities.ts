@@ -62,6 +62,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0.1,
 		num: 0,
 	},
+	testing: {
+		onUpdate(pokemon) {
+			console.log(pokemon.side.team);
+		},
+		name: "Testing",
+		rating: 4,
+		num: 991,
+	},
 	adaptability: {
 		onModifyMove(move) {
 			move.stab = 2;
